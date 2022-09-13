@@ -58,8 +58,12 @@ class Automovil {
     }
 
     public cargarCombustible(nivelCombustible:number):void {
+        if (nivelCombustible > 1) {
         console.log("cargando combustible...");
-        this.nivelCombustible= nivelCombustible;
+        this.nivelCombustible = nivelCombustible;
+        } else {
+            console.log("Error! No se admiten numeros Negativos en la carga de Combustible");
+        }
     }
 
     public cambiarColor(color:string):void {
@@ -80,4 +84,3 @@ auto1.acelerar();
 console.log(auto1);
 
 auto1.cambiarColor("Azul");
-
