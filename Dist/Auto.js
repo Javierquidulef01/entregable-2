@@ -48,8 +48,13 @@ var Automovil = /** @class */ (function () {
         }
     };
     Automovil.prototype.cargarCombustible = function (nivelCombustible) {
-        console.log("cargando combustible...");
-        this.nivelCombustible = nivelCombustible;
+        if (nivelCombustible > 1) {
+            console.log("cargando combustible...");
+            this.nivelCombustible = nivelCombustible;
+        }
+        else {
+            console.log("Error! No se admiten numeros Negativos en la carga de Combustible");
+        }
     };
     Automovil.prototype.cambiarColor = function (color) {
         this.color = color;
